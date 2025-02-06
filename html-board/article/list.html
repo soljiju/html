@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>글목록</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<style>
+    /* 태그 초기화 */
+    * {
+    margin: 0;
+    padding: 0;
+    font: normal 12px '돋움';
+}
+ul, ol {list-style: none;}
+a {text-decoration: none; color: #111;}
+input, textarea {outline: none;}
+
+#wrapper {
+    width: 800px;
+    height: auto;            
+    margin: 0 auto;
+}
+
+/* 헤더 */
+header {
+    width: 100%;
+    height: 35px;
+}
+
+header > h3 {
+    float: left; 
+    margin-top: 10px;    
+}
+
+header > p {
+    float: right;
+    margin-top: 10px;
+}
+
+header .title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+header .info {
+    text-decoration: underline;
+}
+
+/* 메인 */
+main {
+    width: 100%;
+    height: auto;            
+}
+/* 푸터 */
+footer {
+    width: 100%;
+    height: 35px;
+}
+
+footer > p {
+    margin-top: 10px;
+    margin-right: 10px;
+    color: #777;
+    overflow: hidden;
+}
+
+footer > p > .copyright {
+    float: left;
+}
+
+footer > p > .version {
+    float: right;
+}
+
+    /* board 공통 */
+#article > section > nav {
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+#article > section > nav > h1 {
+    float: left;
+    margin-top: 10px;
+}
+
+
+/* 글목록 */
+#article > .list {
+    position: relative;
+    width: 100%;
+    height: auto;            
+    margin: 60px auto;    
+}
+
+#article > .list > nav > form {
+    float: right;
+}
+
+#article > .list > nav > form > input[name=search]{
+    width: 200px;
+    height: 26px;
+    text-indent: 6px;
+    border: 1px solid #d7d7d7;
+}
+#article > .list > nav >form > input[type=submit]{
+    border: 1px solid #d7d7d7;
+    background: #f2f2f2; 
+    color: #111;
+    padding: 6px;
+}
+
+#article > .list > table {
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-top: 2px solid #111;
+}
+#article > .list > table tr {}
+#article > .list > table > caption {
+    text-align: left;
+    margin-bottom: 6px;
+}
+#article > .list > table tr > th {
+    width: auto;
+    height: 40px;
+    background: #e5ecef;
+    border-bottom: 1px solid #d1dee2;
+}
+#article > .list > table tr > td {
+    width: auto;
+    height: 40px;
+    border-bottom: 1px solid #e9e9e9;
+    text-align: center;
+}
+#article > .list > table tr > td:nth-child(1) {}
+#article > .list > table tr > td:nth-child(2) {text-align: left;}
+#article > .list > table tr > td:nth-child(3) {}
+#article > .list > table tr > td:nth-child(4) {}
+#article > .list > table tr > td:nth-child(5) {}
+
+#article > .list > .page {
+    text-align: center;
+    margin-top: 10px;
+}
+#article > .list > .page > a {
+    display: inline-block;
+    padding: 8px;
+    border: 1px solid #d7d7d7;
+    background: #f2f2f2;
+}
+#article > .list > .page > .prev {}
+#article > .list > .page > .next {}
+#article > .list > .page > .num {}
+#article > .list > .page > .current {
+    border: 1px solid #6d6d6d;
+    background: #888;
+    color: #fff;
+}
+
+</style>
+<body>
+    <div id="wrapper">
+        <header>
+            <h3>
+                <a href="/index.html" class="title">Board Project</a>
+            </h3>
+            <p>
+                <a href="../user/info.html" class="info">홍길동</a>님 반갑습니다.
+                <a href="../user/login.html">[로그아웃]</a>
+            </p>
+        </header>
+        <main id="article">
+            <section class="list">
+                <nav>
+                    <h1>글목록</h1>
+                    <form action="#">
+                        <input type="text" name="search" placeholder="제목 키워드, 글쓴이 검색">
+                        <input type="submit" value="검색">
+                    </form>
+                </nav>
+                                
+                <table border="0">                    
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>글쓴이</th>
+                        <th>날짜</th>
+                        <th>조회</th>
+                    </tr>                    
+                    <tr>
+                        <td>1</td>
+                        <td><a href="./view.html">테스트 제목입니다.[3]</a></td>
+                        <td>길동이</td>
+                        <td>20-05-12</td>
+                        <td>12</td>
+                    </tr>
+                </table>
+
+                <div class="page">
+                    <a href="#" class="prev">이전</a>
+                    <a href="#" class="num current">1</a>
+                    <a href="#" class="num">2</a>
+                    <a href="#" class="num">3</a>
+                    <a href="#" class="next">다음</a>
+                </div>
+
+                <a href="./write.html" class="btn btnWrite">글쓰기</a>
+                
+            </section>
+        </main>
+        <footer>
+            <p>
+                <span class="copyright">Copyrightⓒ 주솔지</span>
+                <span class="version">v1.0.1</span>
+            </p>
+        </footer>
+    </div>    
+</body>
+</html>
