@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>글보기</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<style>
+            /* 태그 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    font: normal 12px '돋움';
+}
+ul, ol {list-style: none;}
+a {text-decoration: none; color: #111;}
+input, textarea {outline: none;}
+
+#wrapper {
+    width: 800px;
+    height: auto;            
+    margin: 0 auto;
+}
+
+/* 헤더 */
+header {
+    width: 100%;
+    height: 35px;
+}
+
+header > h3 {
+    float: left; 
+    margin-top: 10px;    
+}
+
+header > p {
+    float: right;
+    margin-top: 10px;
+}
+
+header .title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+header .info {
+    text-decoration: underline;
+}
+
+/* 메인 */
+main {
+    width: 100%;
+    height: auto;            
+}
+/* 푸터 */
+footer {
+    width: 100%;
+    height: 35px;
+}
+
+footer > p {
+    margin-top: 10px;
+    margin-right: 10px;
+    color: #777;
+    overflow: hidden;
+}
+
+footer > p > .copyright {
+    float: left;
+}
+
+footer > p > .version {
+    float: right;
+}
+
+/* 글보기 */
+#article > .view {
+    width: 100%;
+    height: auto;            
+    margin: 60px auto;
+    overflow: hidden;
+}
+#article > .view table {
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-top: 2px solid #111;
+}
+#article > .view table caption{
+    text-align: left;
+    margin-bottom: 6px;
+}
+#article > .view table th {
+    width: 112px;
+    height: 50px;
+    background: #f5f8f9;
+    border-bottom: 1px solid #e9e9e9;
+}
+#article > .view table td {
+    padding: 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e9e9e9;
+}
+#article > .view table td > input {
+    width: 400px;
+    height: 24px;
+    border: none;
+}
+#article > .view table td > textarea {
+    width: 100%;
+    height: 280px;
+    resize: none;
+    border: none;
+}
+
+#article > .view > div {
+    text-align: right;
+    margin-top: 10px;
+}
+
+#article > .view > section {
+    width: 100%;
+    height: auto;
+    border: 1px solid #e3e3e3;
+    background: #f9f9f9;
+    box-sizing: border-box;
+    margin-top: 10px;
+    padding: 16px;
+}
+    
+#article > .view > section > h3 {
+    font-size: 13px;
+    font-weight: bold;
+    border-bottom: 1px dotted #111;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#article > .view > .commentList {}
+#article > .view > .commentList > article {overflow: hidden;}        
+#article > .view > .commentList .nick {}
+#article > .view > .commentList .date {}
+#article > .view > .commentList .content {padding: 10px;}
+#article > .view > .commentList > article > div {float: right;}
+#article > .view > .commentList > article .remove {}
+#article > .view > .commentList > article .modify {}
+#article > .view > .commentList > .empty {
+    margin: 20px;
+    text-align: center;
+}
+
+#article > .view > .commentForm {
+    overflow: hidden;
+}
+#article > .view > .commentForm textarea {
+    width: 100%;
+    height: 60px;
+    border: 1px solid #e4eaec;
+    padding: 6px;
+    box-sizing: border-box;
+    resize: none;
+}
+#article > .view > .commentForm div {
+    float: right;
+    margin-top: 10px;
+}
+/* 버튼 공통 */
+.btn {
+    display: inline-block;
+    padding: 8px;    
+    border: 1px solid #bebebe; 
+    text-align: center;    
+    cursor: pointer;
+}
+
+.btnRegister {}
+.btnWrite {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #3b3c3f; 
+    background: #4b545e; 
+    color: #fff;
+}
+
+.btnComplete {
+    border: 1px solid #3b3c3f; 
+    background: #4b545e; 
+    color: #fff;
+}
+
+.btnAuth, .btnConfirm {
+    display: inline-block;
+    padding: 4px;    
+    border: 1px solid #bebebe; 
+    text-align: center;
+}
+
+
+.btnUpdatePass {
+    padding: 5px; background: #2e658a; color:#fff; border: 1px solid #bebebe; 
+}
+.btnWithdraw {
+    padding: 5px; background: #ed2f2f; color:#fff;
+}
+</style>
+<body>
+    <div id="wrapper">
+        <header>
+            <h3>
+                <a href="/index.html" class="title">Board Project</a>
+            </h3>
+            <p>
+                <a href="../user/info.html" class="info">홍길동</a>님 반갑습니다.
+                <a href="#">[로그아웃]</a>
+            </p>
+            </p>
+        </header>
+        <main id="article">
+            <section class="view">
+                <nav>
+                    <h1>글보기</h1>
+                </nav>
+                <table border="0">                    
+                    <tr>
+                        <th>제목</th>
+                        <td><input type="text" name="title" value="제목입니다." readonly/></td>
+                    </tr>
+                    <tr>
+                        <th>파일</th>
+                        <td><a href="#">2020년 상반기 매출자료.xls</a>&nbsp;<span>7</span>회 다운로드</td>
+                    </tr>
+                    <tr>
+                        <th>내용</th>
+                        <td>
+                            <textarea name="content" readonly>내용 샘플입니다.</textarea>
+                        </td>
+                    </tr>                    
+                </table>
+                
+                <div>
+                    <a href="#" class="btn btnRemove">삭제</a>
+                    <a href="./modify.html" class="btn btnModify">수정</a>
+                    <a href="./list.html" class="btn btnList">목록</a>
+                </div>
+
+                <!-- 댓글목록 -->
+                <section class="commentList">
+                    <h3>댓글목록</h3>                   
+
+                    <article>
+                        <span class="nick">길동이</span>
+                        <span class="date">20-05-20</span>
+                        <p class="content">댓글 샘플 입니다.</p>                        
+                        <div>
+                            <a href="#" class="remove">삭제</a>
+                            <a href="#" class="modify">수정</a>
+                        </div>
+                    </article>
+
+                    <p class="empty">등록된 댓글이 없습니다.</p>
+
+                </section>
+
+                <!-- 댓글쓰기 -->
+                <section class="commentForm">
+                    <h3>댓글쓰기</h3>
+                    <form action="#">
+                        <textarea name="content">댓글내용 입력</textarea>
+                        <div>
+                            <a href="#" class="btn btnCancel">취소</a>
+                            <input type="submit" value="작성완료" class="btn btnComplete"/>
+                        </div>
+                    </form>
+                </section>
+
+            </section>
+        </main>
+        <footer>
+            <p>
+                <span class="copyright">Copyrightⓒ 주솔지</span>
+                <span class="version">v1.0.1</span>
+            </p>
+        </footer>
+    </div>    
+</body>
+</html>

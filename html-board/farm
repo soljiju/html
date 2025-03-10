@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Story</title>
+</head>
+<body>
+    <h3>ADMINISTRATOR</h3>
+    <h4>주요기능</h4>
+    <p>
+        <a href="#">상품목록</a><br>
+        <a href="#">상품등록</a><br>
+    </p>
+    
+    <p>
+        <a href="#">주문목록</a><br>
+    </p>
+
+    <p>
+        <a href="#">회원목록</a><br>
+    </p>
+</body>
+</html>
+
+<!--
+
+
+
+-->
+
+
+

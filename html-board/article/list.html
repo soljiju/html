@@ -8,7 +8,7 @@
 </head>
 <style>
     /* 태그 초기화 */
-    * {
+* {
     margin: 0;
     padding: 0;
     font: normal 12px '돋움';
@@ -76,19 +76,6 @@ footer > p > .copyright {
 footer > p > .version {
     float: right;
 }
-
-    /* board 공통 */
-#article > section > nav {
-    padding: 10px 0;
-    overflow: hidden;
-}
-
-#article > section > nav > h1 {
-    float: left;
-    margin-top: 10px;
-}
-
-
 /* 글목록 */
 #article > .list {
     position: relative;
@@ -162,7 +149,45 @@ footer > p > .version {
     background: #888;
     color: #fff;
 }
+/* 버튼 공통 */
+.btn {
+    display: inline-block;
+    padding: 8px;    
+    border: 1px solid #bebebe; 
+    text-align: center;    
+    cursor: pointer;
+}
 
+.btnRegister {}
+.btnWrite {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #3b3c3f; 
+    background: #4b545e; 
+    color: #fff;
+}
+
+.btnComplete {
+    border: 1px solid #3b3c3f; 
+    background: #4b545e; 
+    color: #fff;
+}
+
+.btnAuth, .btnConfirm {
+    display: inline-block;
+    padding: 4px;    
+    border: 1px solid #bebebe; 
+    text-align: center;
+}
+
+
+.btnUpdatePass {
+    padding: 5px; background: #2e658a; color:#fff; border: 1px solid #bebebe; 
+}
+.btnWithdraw {
+    padding: 5px; background: #ed2f2f; color:#fff;
+}
 </style>
 <body>
     <div id="wrapper">
